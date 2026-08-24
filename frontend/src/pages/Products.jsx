@@ -12,7 +12,7 @@ const Products = () => {
       try {
         setLoading(true);
         const response = await api.get("/products/");
-        setProducts(response.data);
+        setProducts(response.data.results);
         setError(null);
       } catch (err) {
         console.error("Error fetching products:", err);
